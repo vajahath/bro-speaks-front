@@ -4,10 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { PublicJokesComponent } from '../public-jokes/public-jokes.component';
+import { UserDashComponent } from '../user-dash/user-dash.component';
+import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-	{ path: '', component: PublicJokesComponent }
-	// { path: 'login', component: LoginComponent }
+	{ path: 'jokes', component: PublicJokesComponent },
+	{ path: 'u', component: UserDashComponent },
+	{ path: '', redirectTo: '/jokes', pathMatch: 'full' },
+	{ path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
@@ -15,7 +19,12 @@ const appRoutes: Routes = [
 		BrowserModule,
 		RouterModule.forRoot(appRoutes, { enableTracing: true })
 	],
-	declarations: [AppComponent, PublicJokesComponent],
+	declarations: [
+		AppComponent,
+		PublicJokesComponent,
+		UserDashComponent,
+		PageNotFoundComponent
+	],
 	bootstrap: [AppComponent],
 	providers: []
 })
