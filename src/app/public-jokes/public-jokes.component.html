@@ -1,13 +1,15 @@
-<header>
-    <h1>Bro-speaks</h1>
-</header>
-<hr>
-<p>This is Bill.
-    <br>Be like Bill.</p>
-<hr>
-<footer>
-    <nav>
-        <a routerLink="/u">Dash</a>
-        <a routerLink="/u/add-jokes">Add joke X</a>
-    </nav>
-</footer>
+<mat-toolbar color="primary">
+    <span>bro speaks</span>
+    <span class="fill-remaining-space"></span>
+    <span>
+        <a mat-button routerLink="/u">dash</a>
+    </span>
+</mat-toolbar>
+
+<mat-grid-list cols="1">
+    <div class="joke-container">
+        <p class="text">This is Bill</p>
+    </div>
+</mat-grid-list>
+
+<a mat-fab routerLink="/u/add-jokes">new</a>

@@ -1,7 +1,11 @@
-<nav>
-    <h3>
-        <Strong>Bro speaks|</Strong> Bill's Home</h3>
-</nav>
+<mat-toolbar color="primary">
+    <span>bro speaks</span>
+    <span class="fill-remaining-space"></span>
+    <span>
+        <a mat-button routerLink="/u">dash</a>
+    </span>
+</mat-toolbar>
+
 <router-outlet></router-outlet>
 <a routerLink='/jokes'>Public Jokes</a>
 <a routerLink='add-jokes'>Add Joke X</a>
