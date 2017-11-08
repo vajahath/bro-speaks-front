@@ -1,12 +1,24 @@
 import { NgModule } from '@angular/core';
 
-import { UserDashRoutingModule } from './user-dash-routing.module';
-import { UserDashComponent } from './user-dash.component';
+// ng-material module imports
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
-import { AddJokesComponent } from './add-jokes/add-jokes.component';
+// app modules
+import { UserDashRoutingModule } from './user-dash-routing.module';
+import { DashHomeModule } from '../dash-home/dash-home.module';
+
+// app components
+import { UserDashComponent } from './user-dash.component';
+import { AddJokesComponent } from '../add-jokes/add-jokes.component';
 
 @NgModule({
-	imports: [UserDashRoutingModule],
+	imports: [
+		MatToolbarModule,
+		MatButtonModule,
+		DashHomeModule,
+		UserDashRoutingModule
+	],
 	declarations: [UserDashComponent, AddJokesComponent],
 	providers: []
 })
