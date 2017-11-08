@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Joke } from '../Joke';
-import { JOKES } from '../mock-jokes';
+import { JokeService } from '../joke.service';
 
 @Component({
 	selector: 'app-dash-home',
@@ -8,9 +8,15 @@ import { JOKES } from '../mock-jokes';
 	styleUrls: ['./dash-home.component.css']
 })
 export class DashHomeComponent implements OnInit {
-	jokes: Joke[] = JOKES;
+	constructor(private jokeService: JokeService) {}
 
-	constructor() {}
+	jokes: Joke[];
 
-	ngOnInit() {}
+	getJokes(): void {
+		this.jokes = this.jokeService.getJokes();
+	}
+
+	ngOnInit() {
+		this.getJokes();
+	}
 }

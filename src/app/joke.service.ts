@@ -7,7 +7,7 @@ import { JOKES } from './mock-jokes';
 export class JokeService {
 	constructor() {}
 
-	getHeroes(): Joke[] {
+	getJokes(): Joke[] {
 		return JOKES;
 	}
 }
