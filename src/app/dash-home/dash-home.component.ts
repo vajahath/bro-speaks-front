@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Joke } from './Joke';
+import { Joke } from '../Joke';
+import { JOKES } from '../mock-jokes';
 
 @Component({
 	selector: 'app-dash-home',
@@ -7,10 +8,7 @@ import { Joke } from './Joke';
 	styleUrls: ['./dash-home.component.css']
 })
 export class DashHomeComponent implements OnInit {
-	joke: Joke = {
-		author: 'Megan Fox',
-		jokeText: 'this is bill, be like bill'
-	};
+	jokes: Joke[] = JOKES;
 
 	constructor() {}
 

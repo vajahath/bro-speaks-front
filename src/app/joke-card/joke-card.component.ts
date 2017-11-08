@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Joke } from '../dash-home/Joke';
+import { Joke } from '../Joke';
 
 @Component({
 	selector: 'app-joke-card',

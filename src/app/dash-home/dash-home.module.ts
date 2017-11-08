@@ -1,3 +1,4 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 // ng-material module imports
@@ -11,7 +12,7 @@ import { JokeCardModule } from '../joke-card/joke-card.module';
 import { DashHomeComponent } from './dash-home.component';
 
 @NgModule({
-	imports: [MatButtonModule, MatListModule, JokeCardModule],
+	imports: [BrowserModule, MatButtonModule, MatListModule, JokeCardModule],
 	declarations: [DashHomeComponent],
 	providers: []
 })
