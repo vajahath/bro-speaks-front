@@ -6,15 +6,20 @@ import { MatButtonModule } from '@angular/material/button';
 
 // app modules
 import { UserDashRoutingModule } from './user-dash-routing.module';
-import { DashHomeComponent } from './dash-home/dash-home.component';
+import { DashHomeModule } from '../dash-home/dash-home.module';
 
 // app components
 import { UserDashComponent } from './user-dash.component';
-import { AddJokesComponent } from './add-jokes/add-jokes.component';
+import { AddJokesComponent } from '../add-jokes/add-jokes.component';
 
 @NgModule({
-	imports: [MatToolbarModule, MatButtonModule, UserDashRoutingModule],
-	declarations: [DashHomeComponent, UserDashComponent, AddJokesComponent],
+	imports: [
+		MatToolbarModule,
+		MatButtonModule,
+		DashHomeModule,
+		UserDashRoutingModule
+	],
+	declarations: [UserDashComponent, AddJokesComponent],
 	providers: []
 })
 export class UserDashModule {}

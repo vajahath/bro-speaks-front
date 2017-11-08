@@ -9,11 +9,11 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
-import { UserDashModule } from '../user-dash/user-dash.module';
+import { UserDashModule } from './user-dash/user-dash.module';
 
 import { AppComponent } from './app.component';
-import { PublicJokesComponent } from '../public-jokes/public-jokes.component';
-import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
+import { PublicJokesComponent } from './public-jokes/public-jokes.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
 	imports: [
