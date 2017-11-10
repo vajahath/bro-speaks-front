@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Rx';
+import { of } from 'rxjs/observable/of';
 
 import { Joke } from './Joke';
 import { JOKES } from './mock-jokes';
@@ -7,7 +9,7 @@ import { JOKES } from './mock-jokes';
 export class JokeService {
 	constructor() {}
 
-	getJokes(): Joke[] {
-		return JOKES;
+	getJokes(): Observable<Joke[]> {
+		return of(JOKES);
 	}
 }

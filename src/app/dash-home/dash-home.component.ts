@@ -13,7 +13,7 @@ export class DashHomeComponent implements OnInit {
 	jokes: Joke[];
 
 	getJokes(): void {
-		this.jokes = this.jokeService.getJokes();
+		this.jokeService.getJokes().subscribe(jokes => (this.jokes = jokes));
 	}
 
 	ngOnInit() {
