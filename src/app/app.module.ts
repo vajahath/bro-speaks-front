@@ -6,15 +6,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // ng-material module imports
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { MatButtonModule } from '@angular/material/button';
 
 // custom modules
 import { AppRoutingModule } from './app-routing.module';
 import { UserDashModule } from './user-dash/user-dash.module';
+import { PublicJokesModule } from './public-jokes/public-jokes.module';
 
 // components
 import { AppComponent } from './app.component';
-import { PublicJokesComponent } from './public-jokes/public-jokes.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 // services
@@ -29,14 +28,16 @@ import { JokeService } from './joke.service';
 		BrowserAnimationsModule,
 		MatToolbarModule,
 		MatGridListModule,
-		MatButtonModule,
 
 		// app-modules
 		UserDashModule,
-		AppRoutingModule
+		PublicJokesModule,
+
+		// final-AppRoute
+		AppRoutingModule,
 	],
-	declarations: [AppComponent, PublicJokesComponent, PageNotFoundComponent],
+	declarations: [AppComponent, PageNotFoundComponent],
 	bootstrap: [AppComponent],
-	providers: [JokeService]
+	providers: [JokeService],
 })
 export class AppModule {}
