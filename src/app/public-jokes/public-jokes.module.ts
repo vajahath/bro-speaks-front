@@ -13,6 +13,9 @@ import { PublicJokesRoutingModule } from './public-jokes-routing.module';
 // app components
 import { PublicJokesComponent } from './public-jokes.component';
 
+// services
+import { PublicJokesService } from './public-jokes.service';
+
 @NgModule({
 	imports: [
 		// main
@@ -28,7 +31,7 @@ import { PublicJokesComponent } from './public-jokes.component';
 		PublicJokesRoutingModule,
 	],
 	declarations: [PublicJokesComponent],
-	providers: [],
+	providers: [PublicJokesService],
 	exports: [PublicJokesComponent],
 })
 export class PublicJokesModule {}
