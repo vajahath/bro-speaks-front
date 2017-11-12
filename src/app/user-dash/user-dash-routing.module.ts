@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AddJokesComponent } from '../add-jokes/add-jokes.component';
 import { DashHomeComponent } from '../dash-home/dash-home.component';
+import { DashFeedComponent } from '../dash-feed/dash-feed.component';
 import { UserDashComponent } from './user-dash.component';
 
 const userDashRoutes: Routes = [
@@ -12,18 +13,22 @@ const userDashRoutes: Routes = [
 		children: [
 			{
 				path: '',
-				component: DashHomeComponent
+				component: DashHomeComponent,
+			},
+			{
+				path: 'feed',
+				component: DashFeedComponent,
 			},
 			{
 				path: 'add-jokes',
-				component: AddJokesComponent
-			}
-		]
-	}
+				component: AddJokesComponent,
+			},
+		],
+	},
 ];
 
 @NgModule({
 	imports: [RouterModule.forChild(userDashRoutes)],
-	exports: [RouterModule]
+	exports: [RouterModule],
 })
 export class UserDashRoutingModule {}
