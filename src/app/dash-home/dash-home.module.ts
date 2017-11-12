@@ -1,9 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // ng-material module imports
-import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 // app modules
 import { JokeCardModule } from '../joke-card/joke-card.module';
@@ -11,9 +16,27 @@ import { JokeCardModule } from '../joke-card/joke-card.module';
 // app components
 import { DashHomeComponent } from './dash-home.component';
 
+// app services
+import { PublishJokeService } from '../user-dash/publish-joke.service';
+
 @NgModule({
-	imports: [BrowserModule, MatButtonModule, MatListModule, JokeCardModule],
+	imports: [
+		// main
+		BrowserModule,
+		FormsModule,
+
+		// ng-material
+		MatButtonModule,
+		MatListModule,
+		MatCardModule,
+		MatFormFieldModule,
+		MatInputModule,
+		MatSnackBarModule,
+
+		// app-specific
+		JokeCardModule,
+	],
 	declarations: [DashHomeComponent],
-	providers: []
+	providers: [PublishJokeService],
 })
 export class DashHomeModule {}

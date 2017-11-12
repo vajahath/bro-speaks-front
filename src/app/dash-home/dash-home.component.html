@@ -1,7 +1,21 @@
 <div class="joke-list">
-    <ul>
-        <li *ngFor="let joke of jokes">
-            <app-joke-card [joke]='joke'></app-joke-card>
-        </li>
-    </ul>
+	<ul>
+		<li>
+			<div class="new-joke-card">
+				<mat-card>
+					<mat-card-content>
+						<mat-form-field>
+							<textarea [(ngModel)]="newJoke" matInput placeholder="Share your joke"></textarea>
+						</mat-form-field>
+					</mat-card-content>
+					<mat-card-actions>
+						<button (click)="publishJoke(newJoke)" mat-raised-button color="primary">SHARE</button>
+					</mat-card-actions>
+				</mat-card>
+			</div>
+		</li>
+		<li *ngFor="let joke of jokes.reverse()">
+			<app-joke-card [joke]='joke'></app-joke-card>
+		</li>
+	</ul>
 </div>
