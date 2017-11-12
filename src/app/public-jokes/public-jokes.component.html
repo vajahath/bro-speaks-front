@@ -1,15 +1,17 @@
 <mat-toolbar color="primary">
-    <span>bro speaks</span>
-    <span class="fill-remaining-space"></span>
-    <span>
-        <a mat-button routerLink="/u">dash</a>
-    </span>
+	<span>bro speaks</span>
+	<span class="fill-remaining-space"></span>
+	<span>
+		<a mat-button routerLink="/u">dash</a>
+	</span>
 </mat-toolbar>
 
-<mat-grid-list cols="1">
-    <div class="joke-container">
-        <p class="text">This is Bill</p>
-    </div>
-</mat-grid-list>
+<div class="joke-list">
+	<ul>
+		<li *ngFor="let joke of jokes">
+			<app-joke-card [joke]='joke'></app-joke-card>
+		</li>
+	</ul>
+</div>
 
 <a mat-fab routerLink="/u/add-jokes">new</a>
