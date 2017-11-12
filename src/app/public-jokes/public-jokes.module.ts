@@ -5,9 +5,9 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatGridListModule } from '@angular/material/grid-list';
 
 // app modules
+import { JokeCardModule } from '../joke-card/joke-card.module';
 import { PublicJokesRoutingModule } from './public-jokes-routing.module';
 
 // app components
@@ -25,9 +25,9 @@ import { PublicJokesService } from './public-jokes.service';
 		MatButtonModule,
 		MatCardModule,
 		MatToolbarModule,
-		MatGridListModule,
 
 		// custom modules
+		JokeCardModule,
 		PublicJokesRoutingModule,
 	],
 	declarations: [PublicJokesComponent],

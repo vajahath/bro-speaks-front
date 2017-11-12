@@ -6,10 +6,12 @@
 	</span>
 </mat-toolbar>
 
-<mat-grid-list cols="1">
-	<div *ngFor="let joke of jokes" class="joke-container">
-		<p class="text">{{joke.jokeText}} : {{joke.author}}</p>
-	</div>
-</mat-grid-list>
+<div class="joke-list">
+	<ul>
+		<li *ngFor="let joke of jokes">
+			<app-joke-card [joke]='joke'></app-joke-card>
+		</li>
+	</ul>
+</div>
 
 <a mat-fab routerLink="/u/add-jokes">new</a>
