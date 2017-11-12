@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 import { PublishJokeService } from '../user-dash/publish-joke.service';
 import { Joke } from '../Joke';
@@ -14,8 +14,8 @@ import { MatSnackBar } from '@angular/material';
 export class AddJokesComponent {
 	constructor(
 		private publishJokesService: PublishJokeService,
-		private location: Location,
 		public snackBar: MatSnackBar,
+		private router: Router,
 	) {}
 
 	publishJoke(joke: Joke): void {
@@ -25,7 +25,7 @@ export class AddJokesComponent {
 				this.snackBar.open('message', 'action', {
 					duration: 2000,
 				});
-				this.location.back();
+				this.router.navigateByUrl('/u');
 			});
 	}
 }
