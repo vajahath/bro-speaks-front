@@ -11,13 +11,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 // app modules
-import { JokeCardModule } from '../joke-card/joke-card.module';
+import { JokeCardModule } from '../../joke-card/joke-card.module';
 
 // app components
 import { DashHomeComponent } from './dash-home.component';
 
 // app services
-import { PublishJokeService } from '../user-dash/publish-joke.service';
+import { PublishJokeService } from '../../user-dash/publish-joke.service';
 
 @NgModule({
 	imports: [

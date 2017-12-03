@@ -10,8 +10,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 // app modules
 import { UserDashRoutingModule } from './user-dash-routing.module';
-import { DashHomeModule } from '../dash-home/dash-home.module';
-import { DashFeedModule } from '../dash-feed/dash-feed.module';
+import { DashHomeModule } from './dash-home/dash-home.module';
+import { DashFeedModule } from './dash-feed/dash-feed.module';
 
 // app components
 import { UserDashComponent } from './user-dash.component';

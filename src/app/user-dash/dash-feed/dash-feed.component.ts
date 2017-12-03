@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Joke } from '../Joke';
-import { JokeService } from '../joke.service';
+import { Joke } from '../../Joke';
+import { JokeService } from '../../joke.service';
 
-import { PublishJokeService } from '../user-dash/publish-joke.service';
-import { PublishJokeResponse } from '../user-dash/Publish-joke-response';
+import { PublishJokeService } from '../publish-joke.service';
+import { PublishJokeResponse } from '../Publish-joke-response';
 
 import { MatSnackBar } from '@angular/material';
 
 @Component({
-	selector: 'app-dash-home',
-	templateUrl: './dash-home.component.html',
-	styleUrls: ['./dash-home.component.css'],
+	selector: 'app-dash-feed',
+	templateUrl: './dash-feed.component.html',
+	styleUrls: ['./dash-feed.component.css'],
 })
-export class DashHomeComponent implements OnInit {
+export class DashFeedComponent implements OnInit {
 	constructor(
 		private jokeService: JokeService,
 		private publishJokeService: PublishJokeService,
